@@ -1,0 +1,6 @@
+<p>books works!</p>
+
+
+<ng-container *ngFor="let product of productsList">
+    <span class="product" (click)="showProductDetail(product.id)">{{product.name}}</span>
+</ng-container>

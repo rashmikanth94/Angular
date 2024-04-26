@@ -1,0 +1,8 @@
+<p>********** Template Driven Approach *************</p>
+
+
+<form (ngSubmit)="onSubmit()" #formReference="ngForm">
+    <input type="text" ngModel name="firstName" required >
+    <input type="text" ngModel name="lastName" required email>
+    <button type="submit">Submit</button>
+</form>
