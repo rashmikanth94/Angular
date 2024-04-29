@@ -11,7 +11,7 @@ import { BooksComponent } from './books/books.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { DynamicModule } from './dynamic/dynamic.module';
 import { FormsComponent } from './forms/forms.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReativeFormsComponent } from './reative-forms/reative-forms.component';
 
 @NgModule({
@@ -29,7 +29,8 @@ import { ReativeFormsComponent } from './reative-forms/reative-forms.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

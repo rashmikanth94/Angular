@@ -1,1 +1,44 @@
-<p>reative-forms works!</p>
+********* Reactive Forms ********
+
+
+<form [formGroup]="signUpForm">
+    <div class="formInput">
+        <label>Username</label>
+        <input type="text" formControlName="username" (blur)="checkValidation('username')">
+        <span *ngIf="statemap.username && statemap.username.status == 'invalid'">{{statemap.username.message}}</span>
+    </div>
+    <div class="formInput">
+        <label>Email</label>
+        <input type="text" formControlName="email" (blur)="checkValidation('email')">
+        <span *ngIf="statemap.email && statemap.email.status == 'invalid'">{{statemap.email.message}}</span>
+    </div>
+    <div class="formInput">
+        <input type="radio" value="Male" formControlName="gender">Male
+        <input type="radio" value="Female" formControlName="gender">Female
+    </div>
+
+    <!-- Form Group Example -->
+
+    <div formGroupName="groupExample">
+        <div class="formInput">
+            <label>Company</label>
+            <input type="text" formControlName="company">
+        </div>
+        <div class="formInput">
+            <label>Emp</label>
+            <input type="text" formControlName="empId">
+        </div>
+    </div>
+
+
+    <button (click)="addNewItem()">Add Item</button>
+
+    <!-- Form Array Example -->
+
+    <div formArrayName="arrayExample">
+        <div *ngFor="let item of getControls(); let i = index">
+            <input [formControlName]="i">
+        </div>
+    </div>
+</form>
+

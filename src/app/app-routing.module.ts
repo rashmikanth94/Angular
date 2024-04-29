@@ -8,6 +8,7 @@ import { FormsComponent } from './forms/forms.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductsComponent } from './products/products.component';
+import { ReativeFormsComponent } from './reative-forms/reative-forms.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/home',pathMatch:'full'},
@@ -26,7 +27,9 @@ const routes: Routes = [
     ]
   },
   {path:'dynamic', loadChildren:()=>import('./dynamic/dynamic.module').then((module:any)=>module.DynamicModule)},
-  {path:'forms', component:FormsComponent}
+  {path:'forms', component:FormsComponent},
+  {path:'reactiveForms', component:ReativeFormsComponent}
+
 ];
 
 @NgModule({
